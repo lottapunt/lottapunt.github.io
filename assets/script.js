@@ -1,4 +1,4 @@
-const CONTACT_EMAIL = "YOUR-EMAIL-HERE";
+const CONTACT_EMAIL = "contactshowai@gmail.com";
 
 const menuButton = document.querySelector('.menu-button');
 const siteNav = document.querySelector('.site-nav');
