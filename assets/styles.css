@@ -131,3 +131,39 @@
   .founder-reasons article p { grid-column: 2; }
   .founder-reasons article:nth-child(even) { margin-left: 0; }
 }
+
+
+/* Editorial refinement: text-led hero, navigation and QuickScan output */
+.hero-grid{grid-template-columns:minmax(0,1fr)!important;max-width:1120px}
+.hero-copy-block{max-width:1050px}
+.report-preview{display:none!important}
+
+.brand{font-family:Georgia,"Times New Roman",serif;font-size:2rem;font-weight:400;letter-spacing:-.035em}
+.brand-mark{display:none}
+.site-nav{gap:1.55rem;font-weight:500}
+.site-nav>a{font-size:.98rem;color:var(--ink)}
+.nav-cta{background:transparent!important;color:var(--ink)!important;border:1px solid rgba(29,43,41,.38);border-radius:0;padding:.8rem 1rem}
+.nav-cta:hover{background:rgba(29,43,41,.04)!important}
+.language-switcher summary{border:0;border-radius:0;padding:.35rem .2rem}
+
+.quickscan-output{padding:clamp(7rem,11vw,11rem) 0;background:var(--bg);border-bottom:1px solid var(--line)}
+.output-layout{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(5rem,11vw,11rem);align-items:start}
+.output-intro{position:sticky;top:8rem}
+.output-intro h2{max-width:560px;margin:1.5rem 0 2rem;font-family:Georgia,"Times New Roman",serif;font-size:clamp(3.2rem,5.4vw,5.8rem);font-weight:400;line-height:.98;letter-spacing:-.045em}
+.output-intro>p:not(.output-note){max-width:520px;color:var(--muted);font-size:1.08rem;line-height:1.75}
+.output-note{max-width:520px;margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(29,43,41,.16);color:var(--muted);font-size:1.02rem;line-height:1.75}
+.output-content{padding-top:4.5rem}
+.output-content article{max-width:610px;padding:0 0 4rem;position:relative}
+.output-content article.indented{margin-left:clamp(2rem,7vw,6rem)}
+.output-content article:before{content:"";position:absolute;left:-3.9rem;top:.72rem;width:2.6rem;height:1px;background:var(--accent)}
+.output-content article.indented:before{height:5.5rem;width:1px;left:-2.4rem;top:.25rem;background:rgba(29,43,41,.45)}
+.output-content h3{margin:0 0 .9rem;font-family:Georgia,"Times New Roman",serif;font-size:clamp(2rem,3vw,3.1rem);font-weight:400;line-height:1.08;letter-spacing:-.025em}
+.output-content p{margin:0;color:var(--muted);font-size:1.05rem;line-height:1.72}
+
+@media(max-width:850px){
+ .output-layout{grid-template-columns:1fr;gap:4rem}
+ .output-intro{position:static}
+ .output-content{padding-top:0}
+ .output-content article.indented{margin-left:0}
+ .output-content article:before,.output-content article.indented:before{display:none}
+}
