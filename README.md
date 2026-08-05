@@ -1,59 +1,53 @@
-# ShowAI — English website
+# ShowAI multilingual website
 
-A fully English, static and responsive website for `showai.eu`. It requires no paid CMS, database or hosting package.
+This static GitHub Pages website is available in English, Dutch, German and French.
 
-## Before publishing
+## Structure
 
-1. Open `assets/script.js`.
-2. Replace `YOUR-EMAIL-HERE` with the email address visitors may use.
-3. Open `privacy.html` and add the final email address, trading name and a concrete retention period.
-4. Recheck all legal content against the official sources before publication.
+- `/en/` English
+- `/nl/` Dutch
+- `/de/` German
+- `/fr/` French
+- `/assets/` shared styling, script, logo and social image
+- root `index.html` redirects visitors based on browser language
 
-## Preview locally
+## Publish on GitHub Pages
 
-Open `index.html` in a browser.
+1. Back up the current repository.
+2. Delete or replace the existing website files.
+3. Upload the **contents** of this folder to the repository root.
+4. Keep `CNAME` in the root; it contains `www.showai.eu`.
+5. Commit directly to the `main` branch.
+6. In Settings → Pages, keep `main` and `/(root)`.
+7. Wait for the Pages deployment to finish.
 
-## Publish free with GitHub Pages
+## Contact
 
-1. Create a free GitHub account and a public repository, for example `showai-site`.
-2. Upload every file and folder from this package to the repository root.
-3. Open **Settings → Pages**.
-4. Choose **Deploy from a branch**, select `main` and `/(root)`, then save.
-5. Enter `www.showai.eu` under **Custom domain**.
-6. In the Vimexx DNS panel, create a CNAME record:
-   - Host/name: `www`
-   - Target: `<your-github-username>.github.io`
-7. Redirect `showai.eu` to `https://www.showai.eu` in Vimexx.
-8. Enable **Enforce HTTPS** in GitHub Pages once available.
+The contact form opens the visitor's email application and addresses the message to `contactshowai@gmail.com`. Change this in `assets/script.js` and in each language's `privacy.html` if needed.
 
-## Main files
+## Editing
 
-- `index.html` — homepage
-- `article-50.html` — Article 50 knowledge-base page
-- `code-of-practice.html` — Code of Practice knowledge-base page
-- `human-review.html` — human-review knowledge-base page
-- `why-documentation-matters.html` — penalties, documentation and business-risk knowledge-base page
-- `privacy.html` — privacy information
-- `assets/styles.css` — design and responsive layout
-- `assets/script.js` — mobile navigation and contact form
-- `assets/favicon.svg` — logo/favicon
-- `assets/og-image.png` — social sharing image
-- `CNAME` — custom domain setting for GitHub Pages
+Each language has separate HTML files. Edit the matching file in each language folder to keep translations aligned. Shared visual changes belong in `assets/styles.css`.
 
-## Cookies and analytics
+## Legal note
 
-This version does not place tracking cookies and does not use analytics. Update the privacy and cookie information before adding either.
+The site contains general information and explicit disclaimers. Verify legal content and application dates periodically against the official sources linked in the Insights article.
 
+## Founder section added
 
-## Knowledge base update — 13 July 2026
+The four homepages now include a translated founder section with Lotta Punt's photo and personal story.
 
-This version adds:
+Before publishing, replace this placeholder LinkedIn URL in all four homepage files:
 
-- `learn.html`: a dedicated knowledge-base landing page;
-- a fully rewritten, source-based first publication: `article-50.html`;
-- Article and breadcrumb structured data;
-- canonical URLs, review dates and primary-source notes;
-- homepage and site-wide navigation to the knowledge base;
-- updated sitemap entries.
+```text
+https://www.linkedin.com/in/your-profile/
+```
 
-The first publication is titled **“What is Article 50 of the EU AI Act?”** and uses official EU sources only.
+Files containing the placeholder:
+
+- `en/index.html`
+- `nl/index.html`
+- `de/index.html`
+- `fr/index.html`
+
+The portrait is stored at `assets/lotta-punt.jpg`.
